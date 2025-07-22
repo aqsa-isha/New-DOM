@@ -1,0 +1,11 @@
+body {
+    background-color: aqua;
+}
+h1 {
+    color: blue;
+    text-decoration: line-through;
+}
+button {
+    background-color: blue;
+    color: white;
+}

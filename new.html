@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myId">Hello!</h1>
+  <p class="myClass">I am paragraph one.</p>
+  <p class="myClass">I am paragraph two.</p>
+  <div>Just a div!</div>
+
+
+  <script>
+     // Select by ID
+    const heading = document.getElementById("myId");
+    heading.textContent = "Hello from JavaScript!";
+
+    // Select by Class
+    const paragraphs = document.getElementsByClassName("myClass");
+    paragraphs[0].textContent = "Paragraph 1 changed!";
+    paragraphs[1].textContent = "Paragraph 2 changed!";
+
+    // Select by Tag Name
+    const divs = document.getElementsByTagName("div");
+    divs[0].textContent = "Div content changed!";
+  </script>
+</body>
+</html>
