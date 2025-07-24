@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <h2>Rock Paper and Scissors Game</h2>
+  <button onclick="playGame()">Play Now!</button>
+  <p id="output"></p>
+
+  <script>
+    function getUserChoice() {
+      const choice = prompt("Enter rock, paper or scissors:").toLowerCase().trim();
+      const options = ["rock", "paper", "scissors"];
+      if (options.includes(choice)) {
+        return choice;
+      } else {
+        alert("Invalid choice");
+        return null;
+      }
+    }
+
+    function getComputerChoice() {
+      const choices = ["rock", "paper", "scissors"];
+      return choices[Math.floor(Math.random() * choices.length)];
+    }
+
+    function determineWinner(user, computer) {
+  if (user === computer) {
+    return "It's a tie!";
+  } else if (
+    (user === 'rock' && computer === 'scissors') ||
+    (user === 'paper' && computer === 'rock') ||
+    (user === 'scissors' && computer === 'paper')
+  ) {
+    return "You win!";
+  } else {
+    return "Computer wins!";
+  }
+}
+
+
+    function playGame() {
+      const user = getUserChoice();
+     
+
+      const computer = getComputerChoice();
+      const result = determineWinner(user, computer);
+
+      document.getElementById("output").innerHTML = `
+        You chose: <strong>${user}</strong><br>
+        Computer chose: <strong>${computer}</strong><br>
+        <strong>${result}</strong>
+      `;
+    }
+  </script>
+</body>
+</html>

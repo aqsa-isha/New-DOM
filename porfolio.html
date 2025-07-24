@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: coral;
+        color: white;
+    }
+</style>
+<body>
+    <header>
+        <h1>Hello, I'm Aqsa</h1>
+        <p>An Enthusiast Web Developer</p>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I build simple, fast, and interactive websites, passionate about AI, Machine Learening and summarization Model</p>
+
+    </section>
+    <section id="projects">
+        <h2>projects</h2>
+        <ul>
+            <li><strong>Rock Paper Scissor game</strong> - I build a rock, paper and scissor game</li>
+        <li><strong>Calculator</strong> I created a calculator with addition, multiplication, subtraction and division </li>
+        <li><strong>portflolio</strong> I created a portfolio where i added about me, projects</li></ul>
+    </section>
+    <section>
+        <h2>Contact Me</h2>
+        <form onsubmit="sendMessage()">
+            <input type="text" id="name" placeholder="you name" required>
+            <input type="email" id="email" placeholder="you email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">send</button>
+        </form>
+    </section>
+
+    <footer>
+       <p>&copy; 2025 Aqsa Soomro</p>
+    </footer>
+
+
+
+    <script>
+        function sendMessage() {
+            const name = document.getElementById("name").value;
+            alert(`Thanks, $(name), Your message has been sent.`)
+        }
+    </script>
+    </body>
+
+</html>
